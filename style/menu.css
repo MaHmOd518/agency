@@ -1,0 +1,90 @@
+nav ul li:nth-child(3)::before {
+  content: "";
+  display: none;
+}
+
+nav ul li ul {
+  height: 100%;
+}
+
+nav ul li ul li {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0 20px;
+  font-weight: lighter;
+}
+
+nav ul li ul li:first-child {
+  font-weight: bold;
+  background-color: #2a69ee;
+  text-align: center;
+  width: 150px;
+  height: 100%;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+nav ul li ul li:first-child ::before {
+  content: url(../img/Iconfeather-mail.svg);
+  margin-right: 3px;
+}
+
+nav ul li ul li:first-child::before {
+  content: "";
+  display: none;
+}
+
+nav ul li ul li:nth-child(2)::before {
+  content: url(../img/Icon-lang.svg);
+}
+
+nav ul li ul li:nth-child(2)::after {
+  content: "";
+  display: none;
+}
+
+nav ul li ul li:last-child {
+  border-left: white 2px solid;
+  padding-left: 40px;
+  max-height: 30px;
+  position: relative;
+}
+
+nav ul li ul li:last-child::after {
+  content: url(../img/Icon-light.svg);
+  position: absolute;
+  left: 16px;
+  top: -16px;
+}
+
+.container .menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.container .menu ul {
+  list-style: none;
+}
+
+.container .menu ul li:hover {
+  color: #06ebbf;
+}
+
+.container .map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .map img {
+  height: 150px;
+  margin: 20px;
+}
+/*# sourceMappingURL=menu.css.map */

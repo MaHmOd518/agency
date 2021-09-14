@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr minmax(450px, 1200px) 1fr;
+  grid-template-rows: 40px 1fr;
+  height: 100vh;
+  & > :first-child {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    opacity: 0.18;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+  }
+  li {
+    cursor: pointer;
+  }
+  nav {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    padding-top: 5px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      max-height: 30px;
+      li {
+        display: inline-block;
+        color: white;
+        font-weight: bold;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+        &::before,
+        &::after {
+          display: inline-block;
+          padding: 3px;
+          transform: translateY(2px);
+        }
+        &:nth-child(1)::before {
+          content: url(../img/icon.svg);
+        }
+
+        &:nth-child(2)::after {
+          content: url(../img/Icon-nav.svg);
+        }
+
+        &:nth-child(3)::before {
+          content: url(../img/Icon-mail.svg);
+        }
+      }
+    }
+  }
+  .container {
+    max-width: 1200px;
+    grid-column: 2/3;
+    grid-row: 2/2;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .text {
+      color: white;
+      align-self: center;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .text1 {
+        font-size: 70px;
+        text-transform: uppercase;
+        span {
+          font-weight: bold;
+        }
+      }
+      .text2 {
+        width: 450px;
+      }
+    }
+
+    .image img {
+      height: 600px;
+      object-position: 50px 70px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    grid-template-columns: minmax(200px, 600px);
+    overflow: hidden;
+    nav {
+      grid-column: auto;
+      padding: 10px 10px;
+    }
+    .container {
+      grid-column: auto;
+      flex-direction: column;
+      padding-top: 20px;
+      .text {
+        height: auto;
+        .text1 {
+          font-size: 38px;
+        }
+        .text2 {
+          width: fit-content;
+        }
+      }
+    }
+    .image img {
+      height: auto;
+      min-width: 300px;
+      max-width: 400px;
+      object-position: 35px -73px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+nav {
+  ul {
+    li {
+      &:nth-child(3)::before {
+        content: "";
+        display: none;
+      }
+      ul {
+        height: 100%;
+        li {
+          align-self: center;
+          padding: 0 20px;
+          font-weight: lighter;
+          &:first-child {
+            font-weight: bold;
+            background-color: #2a69ee;
+            text-align: center;
+            width: 150px;
+            height: 100%;
+            padding: 6px;
+            border-radius: 5px;
+            ::before {
+              content: url(../img/Iconfeather-mail.svg);
+              margin-right: 3px;
+            }
+            &::before {
+              content: "";
+              display: none;
+            }
+          }
+          &:nth-child(2) {
+            &::before {
+              content: url(../img/Icon-lang.svg);
+            }
+            &::after {
+              content: "";
+              display: none;
+            }
+          }
+          &:last-child {
+            border-left: white 2px solid;
+            padding-left: 40px;
+            max-height: 30px;
+            position: relative;
+            &::after {
+              content: url(../img/Icon-light.svg);
+              position: absolute;
+              left: 16px;
+              top: -16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.container {
+  .menu {
+    align-self: center;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+    ul {
+      list-style: none;
+      li:hover {
+        color: #06ebbf;
+      }
+    }
+  }
+  .map {
+    display: flex;
+    img {
+      height: 150px;
+      margin: 20px;
+    }
+  }
+}
